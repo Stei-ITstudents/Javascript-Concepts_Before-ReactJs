@@ -155,4 +155,4 @@ Here, the click event is listened for on the parent `#container`, and if a butto
 
 Event handling is a core concept in JavaScript for building interactive websites. The `addEventListener()` method is used to listen for events on elements, and you can manage the event flow using `preventDefault()` and `stopPropagation()` methods. Common event types include mouse events, keyboard events, and form events. Additionally, understanding how to remove event listeners and utilize event delegation is important for efficient event management in complex applications.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

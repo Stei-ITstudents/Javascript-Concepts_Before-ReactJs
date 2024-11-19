@@ -120,4 +120,4 @@ In summary:
 - **Spread** copies or expands values (arrays or objects) into individual elements.
 - **Rest** collects multiple elements into a single array or object.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

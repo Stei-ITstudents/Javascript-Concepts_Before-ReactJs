@@ -85,4 +85,4 @@ In this example:
 - Closures allow for powerful JavaScript patterns like function factories, data privacy, and deferred execution.
 - Closures are created when a function is returned or passed around and still has access to variables from its outer function.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

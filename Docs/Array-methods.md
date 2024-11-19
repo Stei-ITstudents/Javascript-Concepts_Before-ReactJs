@@ -91,4 +91,4 @@ numbers.forEach((num) => console.log(num * 2));
 
 Let me know if you need examples that combine these methods or more in-depth use cases!
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

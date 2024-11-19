@@ -123,4 +123,4 @@ console.log(myConstVar); // Output: 30
 
 Understanding the differences between **global**, **function**, and **block scope** is crucial for managing variables in JavaScript. While `var` is function-scoped and has hoisting behavior, `let` and `const` are block-scoped and behave differently in terms of hoisting. This impacts variable access and helps prevent errors in your code.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

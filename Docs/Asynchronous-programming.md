@@ -80,4 +80,4 @@ In this example, the `await` keyword pauses the function until the promise is re
 
 This approach makes asynchronous code easier to read and maintain, especially compared to using nested callbacks.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

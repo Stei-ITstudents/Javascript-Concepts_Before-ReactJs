@@ -161,4 +161,4 @@ In React, DOM manipulation is handled by React itself through its Virtual DOM. Y
 
 However, you can still use native DOM methods and event handling in certain cases, especially for integrating third-party libraries or handling specific tasks.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

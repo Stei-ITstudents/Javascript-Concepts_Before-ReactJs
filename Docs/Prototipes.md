@@ -80,4 +80,4 @@ dog.speak(); // Output: "Rex makes a sound"
 
 Understanding prototypes is foundational to mastering inheritance and object-oriented programming in JavaScript.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

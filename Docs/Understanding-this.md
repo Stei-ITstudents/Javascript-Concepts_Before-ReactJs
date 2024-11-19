@@ -102,4 +102,4 @@ Here, the arrow function inside `setTimeout` retains the `this` value from the `
 
 The value of `this` in JavaScript depends on the **context** in which the function is called. In regular functions, `this` can refer to the global object or `undefined` (in strict mode). When calling methods on objects, `this` refers to the object. Arrow functions behave differently by inheriting the `this` value from the surrounding context, making them particularly useful in situations where you need to preserve the value of `this` from an outer scope, such as inside callbacks.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

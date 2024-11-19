@@ -408,4 +408,4 @@ person.greet(); // "Hello, undefined"
 
 In this example, `this` inside the arrow function refers to the `this` of the outer context (likely the global object or `undefined` in strict mode), not the `person` object. To fix this, you would use a regular function instead of an arrow function.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

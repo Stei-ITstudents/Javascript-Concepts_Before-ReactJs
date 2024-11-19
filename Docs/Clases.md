@@ -113,4 +113,4 @@ console.log(rect.area); // Output: 50
 
 This covers the essential aspects of JavaScript classes, helping you understand how to build and extend them effectively.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

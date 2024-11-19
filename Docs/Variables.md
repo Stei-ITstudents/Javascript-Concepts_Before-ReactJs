@@ -130,4 +130,4 @@ For a more detailed explanation, you can refer to these resources:
 - [Global environment records in JavaScript (StackOverflow)](https://stackoverflow.com/questions/44381045/where-does-the-browser-store-global-variables-defined-with-let-or-const#answer-44381701)
 - [Declarative environment record explanation (StackOverflow)](https://stackoverflow.com/questions/20139050/what-really-is-a-declarative-environment-record-and-how-does-it-differ-from-an-a#answer-20140626)
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

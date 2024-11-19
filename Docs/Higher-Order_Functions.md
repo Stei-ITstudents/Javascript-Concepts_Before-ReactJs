@@ -72,4 +72,4 @@ numbers.forEach((num) => console.log(num * 2)); // Log each element multiplied b
 
 These higher-order functions help write concise and expressive code by abstracting away the need for explicit loops. They enhance the readability and maintainability of JavaScript code.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

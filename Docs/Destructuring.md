@@ -144,4 +144,4 @@ console.log(calculate(numbers)); // 15
 
 Destructuring provides a cleaner and more readable syntax for extracting and working with data in JavaScript, especially when dealing with complex objects and arrays.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

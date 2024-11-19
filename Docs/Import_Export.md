@@ -183,4 +183,4 @@ For relative paths, `./` refers to the current directory, and `../` refers to th
 - **Importing**: Use `import` to bring exported code into another file, with support for named, default, and mixed imports.
 - **File extensions**: Ensure that you include `.js` in the import path when using ES6 modules.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

@@ -142,4 +142,4 @@ Promise.race([promise1, promise2])
 - **Finally block**: `.finally()` runs after the promise is settled.
 - **Handling multiple promises**: Use `Promise.all()` for all promises to resolve or `Promise.race()` for the first promise to resolve or reject.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

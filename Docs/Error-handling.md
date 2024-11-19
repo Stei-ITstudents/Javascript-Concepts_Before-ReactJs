@@ -182,4 +182,4 @@ try {
 
 By using error handling, you can make your code more robust, user-friendly, and easier to debug, ensuring that it behaves gracefully even when unexpected issues arise.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

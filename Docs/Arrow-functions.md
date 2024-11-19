@@ -181,4 +181,4 @@ console.log(addNumbers(1, 2, 3, 4)); // 10
 
 Arrow functions make code more concise, especially for short, simple functions, and they are particularly useful when dealing with callbacks and maintaining the correct `this` context. However, they are not suitable for every situation, such as when you need to use them as constructors or when you need access to the `arguments` object.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

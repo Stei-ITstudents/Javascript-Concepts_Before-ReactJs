@@ -39,4 +39,4 @@ getData();
 
 In short, `async/await` makes it easier to write and manage asynchronous code in JavaScript by reducing complexity and improving clarity.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

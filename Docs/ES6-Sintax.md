@@ -132,4 +132,4 @@ async function fetchDataAsync() {
 
 These are the core features of ES6 that will make you more efficient and ready for working with modern JavaScript frameworks, including React.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

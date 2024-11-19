@@ -148,4 +148,4 @@ In this example:
 
 Template literals simplify string creation, making your code more readable and expressive while improving maintainability.
 
-[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main)
+[**Back** ⤴️](https://github.com/Stei-ITstudents/Javascript-Concepts_Before-ReactJs/tree/main#readme)

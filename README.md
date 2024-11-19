@@ -37,7 +37,7 @@
 - [**Closures**](./Docs/Closures.md): Understanding how functions retain access to their lexical environment.
 - [**Scope**](./Docs/Scope.md): Differences between global, function, and block scope, and how `let`, `const`, and `var` affect them.
 
-## [**Object-Oriented Programming (OOP)**](./Docs/)
+## **Object-Oriented Programming (OOP)**
 
 - [**Classes**](./Docs/Clases.md): Understanding ES6 classes, constructors, and methods.
 - [**Prototypes and Inheritance**](./Docs/Prototipes.md): Comprehending JavaScript's prototype chain and inheritance mechanism.
@@ -59,7 +59,15 @@ Familiarity with these concepts will make transitioning to React much easier, as
 ---
 
 ## **Additional Resources**
-Top 5 Skills You Must Know Before You Learn ReactJS
 
-[![Skills](https://media.geeksforgeeks.org/wp-content/uploads/20240313172206/Top-5-Skills-You-Must-Know-Before-You-Learn-ReactJS.png
-)](https://www.geeksforgeeks.org/top-5-skills-you-must-know-before-you-learn-reactjs/)
+### Top 5 Skills You Must Know Before You Learn ReactJS
+
+[![Skills](https://media.geeksforgeeks.org/wp-content/uploads/20240313172206/Top-5-Skills-You-Must-Know-Before-You-Learn-ReactJS.png)](https://www.geeksforgeeks.org/top-5-skills-you-must-know-before-you-learn-reactjs/)
+
+### **JavaScript Cheat Sheet:** A Basic Guide to JavaScript
+
+[![Cheat-Sheet](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220525104343/image-24.png)](https://www.geeksforgeeks.org/javascript-cheat-sheet-a-basic-guide-to-javascript/)
+
+### **How To Learn ReactJS: A Complete Guide For Beginners**
+
+[![ReactJS](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200309202057/How-To-Learn-ReactJS-A-Complete-Guide-For-Beginners.jpg)](https://www.geeksforgeeks.org/learn-reactjs/)
