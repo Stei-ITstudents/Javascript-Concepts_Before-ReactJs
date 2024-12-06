@@ -178,6 +178,43 @@ button.addEventListener("click", () => {
 });
 ```
 
+## Exercise 8 > render list of names
+
+```js
+const names = ['Ion', 'Maria', 'George', 'Andrei', 'Marius'];
+
+// Create and append the list
+const list = document.createElement('ul');
+document.body.appendChild(list);
+
+function renderList(names) {
+list.innerHTML = '';
+
+// Append new list items
+names.forEach(name => {
+const li = document.createElement('li');
+li.textContent = name;
+list.appendChild(li);
+});
+}
+
+// Render
+renderList(names);
+
+// search input
+const input = document.createElement('input');
+input.type = 'text';
+document.body.appendChild(input);
+
+input.addEventListener('input', () => {
+const query = input.value.toLowerCase();
+const filtered = names.filter(name => name.toLowerCase().startsWith(query));
+renderList(filtered);
+
+```
+
+});
+
 // Exercise > Create a chronometer
 
 // Exercise > Create a calculator
