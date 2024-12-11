@@ -213,8 +213,131 @@ renderList(filtered);
 
 ```
 
+// Exercise 10 > Create calculator
+
+```js
+// input
+const input = document.createElement("input");
+input.type = "text";
+document.body.appendChild(input);
+
+// button calculate
+const button = document.createElement("button");
+button.textContent = "Calculate";
+document.body.appendChild(button);
+
+// result paragraph
+const result = document.createElement("p");
+document.body.appendChild(result);
+
+// event listener
+button.addEventListener("click", () => {
+  const numbers = input.value.split(",").map(Number);
+  const subtraction = numbers.reduce((acc, number) => acc - number);
+  result.textContent = "The subtraction is: ${subtraction}";
+});
+```
+
+// Exercise 11 > Create chronometer
+
+```js
+// display
+const timerDisplay = document.createElement("div");
+timerDisplay.textContent = "0 seconds";
+document.body.appendChild(timerDisplay);
+
+// start button
+const startButton = document.createElement("button");
+startButton.textContent = "Start";
+document.body.appendChild(startButton);
+
+// stop button
+const stopButton = document.createElement("button");
+stopButton.textContent = "Stop";
+document.body.appendChild(stopButton);
+
+// reset button
+const resetButton = document.createElement("button");
+resetButton.textContent = "Reset";
+document.body.appendChild(resetButton);
+
+let seconds = 0;
+let interval;
+
+startButton.addEventListener("click", () => {
+  // clear interval
+  clearInterval(interval);
+  // start interval
+  interval = setInterval(() => {
+    seconds += 1;
+    timerDisplay.textContent = `${seconds} seconds`;
+  }, 1000);
 });
 
-// Exercise > Create a chronometer
+stopButton.addEventListener("click", () => {
+  clearInterval(interval);
+});
 
-// Exercise > Create a calculator
+resetButton.addEventListener("click", () => {
+  clearInterval(interval);
+  seconds = 0;
+  timerDisplay.textContent = `${seconds} seconds`;
+});
+```
+
+// Exercise 12 > Create timer
+
+```js
+// display
+const timerDisplay = document.createElement("div");
+seconds = 10;
+timerDisplay.textContent = ` Time left ${seconds} seconds`;
+document.body.appendChild(timerDisplay);
+
+// start button
+const startButton = document.createElement("button");
+startButton.textContent = "Start";
+document.body.appendChild(startButton);
+
+// stop button
+const stopButton = document.createElement("button");
+stopButton.textContent = "Stop";
+document.body.appendChild(stopButton);
+
+// reset button
+const resetButton = document.createElement("button");
+resetButton.textContent = "Reset";
+document.body.appendChild(resetButton);
+
+let countdown;
+const alarmSound = new Audio(
+  "https://assets.mixkit.co/active_storage/sfx/2462/2462-preview.mp3"
+);
+
+startButton.addEventListener("click", () => {
+  clearInterval(countdown);
+  countdown = setInterval(() => {
+    if (isNaN(seconds)) {
+      timerDisplay.textContent = "Not a number";
+      return;
+    }
+    seconds -= 1;
+    timerDisplay.textContent = `Time left ${seconds} seconds`;
+    if (seconds <= 0) {
+      clearInterval(countdown);
+      timerDisplay.textContent = `Time expired, ${seconds} seconds`;
+      alarmSound.play();
+    }
+  }, 1000);
+});
+
+stopButton.addEventListener("click", () => {
+  clearInterval(countdown);
+});
+
+resetButton.addEventListener("click", () => {
+  clearInterval(countdown);
+  seconds = 10;
+  timerDisplay.textContent = `Time left ${seconds} seconds`;
+});
+```
