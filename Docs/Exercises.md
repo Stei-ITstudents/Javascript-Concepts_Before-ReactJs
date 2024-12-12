@@ -341,3 +341,138 @@ resetButton.addEventListener("click", () => {
   timerDisplay.textContent = `Time left ${seconds} seconds`;
 });
 ```
+
+// Exercise 13 > To do list
+
+```js
+// title
+const title = document.createElement("h1");
+title.textContent = "To do list:";
+document.body.appendChild(title);
+
+// input
+const todoInput = document.createElement("input");
+todoInput.type = "text";
+todoInput.placeholder = "Enter a task";
+document.body.appendChild(todoInput);
+
+// add button
+const addTodoButton = document.createElement("button");
+addTodoButton.id = "addTodoButton";
+addTodoButton.textContent = "Add";
+document.body.appendChild(addTodoButton);
+
+// delete button
+const deleteButton = document.createElement("button");
+deleteButton.id = "deleteButton";
+deleteButton.textContent = "Delete";
+document.body.appendChild(deleteButton);
+
+// ul
+const todoList = document.createElement("ul");
+document.body.appendChild(todoList);
+
+// Add event listener
+addTodoButton.addEventListener("click", () => {
+  const task = todoInput.value.trim();
+  if (task) {
+    const li = document.createElement("li");
+
+    const span = document.createElement("span");
+    span.textContent = task;
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    li.appendChild(checkbox);
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked) {
+        li.classList.add("completed");
+      } else {
+        li.classList.remove("completed");
+      }
+    });
+
+    li.appendChild(span);
+    todoList.appendChild(li);
+    todoInput.value = "";
+  }
+  todoList.scrollIntoView({ behavior: "smooth" });
+});
+
+// Delete event listener
+deleteButton.addEventListener("click", () => {
+  const items = todoList.querySelectorAll("li");
+  items.forEach((item) => {
+    const checkbox = item.querySelector("input[type='checkbox']");
+    if (checkbox && checkbox.checked) {
+      todoList.removeChild(item);
+    }
+  });
+});
+
+// enter
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    const task = todoInput.value.trim();
+    if (task) {
+      addTodoButton.click();
+    } else {
+      deleteButton.click();
+    }
+  }
+});
+
+const style = document.createElement("style");
+style.textContent = `
+  h1 {
+    color: lightblue;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  input {
+    padding: 5px;
+    border: "White";
+    border-radius: 5px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  li.completed span{
+    text-decoration: line-through;
+    color: gray;
+  }
+  button {
+    margin-left: 10px;
+    color: white;
+    border: "White";
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  button:hover {
+    transition: background 0.3s;
+    filter: brightness(80%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  #addTodoButton {
+    background-color: blue;
+  }
+  #deleteButton {
+    background-color: red;
+  }
+  body {
+    font-family: Roboto, sans-serif;
+    margin: 20px;
+  }
+`;
+document.head.appendChild(style);
+todoList.scrollIntoView({ behavior: "smooth" });
+```
