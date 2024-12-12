@@ -382,6 +382,7 @@ addTodoButton.addEventListener("click", () => {
     span.textContent = task;
 
     const checkbox = document.createElement("input");
+    checkbox.id = "checkbox";
     checkbox.type = "checkbox";
     li.appendChild(checkbox);
     checkbox.addEventListener("change", () => {
@@ -438,7 +439,11 @@ style.textContent = `
   }
   ul {
     list-style-type: none;
-    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding-left: 10px;
+    max-width: 350px;
+    overflow: auto;
   }
   li {
     margin: 10px 0;
@@ -471,6 +476,9 @@ style.textContent = `
   body {
     font-family: Roboto, sans-serif;
     margin: 20px;
+  }
+  #checkbox {
+    margin-right: 6px;
   }
 `;
 document.head.appendChild(style);
