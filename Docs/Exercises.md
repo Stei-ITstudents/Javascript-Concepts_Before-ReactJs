@@ -484,3 +484,21 @@ style.textContent = `
 document.head.appendChild(style);
 todoList.scrollIntoView({ behavior: "smooth" });
 ```
+
+// Exercise 14 > select event in html.
+
+```html
+<div onclick="test(event, this.textContent)">Click me!</div>
+```
+
+```js
+function test(event, abc) {
+  console.log(event.target);
+  console.log(abc);
+  if (event.target.style.backgroundColor === "red") {
+    event.target.style.backgroundColor = "blue";
+  } else {
+    event.target.style.backgroundColor = "red";
+  }
+}
+```
