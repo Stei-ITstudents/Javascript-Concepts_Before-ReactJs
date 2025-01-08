@@ -419,3 +419,429 @@ document.head.appendChild(style);
 
 button.scrollIntoView({ behavior: "smooth" });
 ```
+
+---
+
+## **5**
+
+a. Creează un link care, la click, afișează un mesaj într-un `<div>` fără a naviga la URL (folosește `preventDefault`).
+
+```js
+const link = document.createElement("a");
+link.href = "#";
+link.textContent = "Click";
+document.body.appendChild(link);
+
+const div = document.createElement("div");
+document.body.appendChild(div);
+
+link.addEventListener("click", (e) => {
+  e.preventDefault();
+  div.textContent = "Mesajul";
+  div.scrollIntoView({ behavior: "smooth" });
+});
+```
+
+b. Creează un formular cu un câmp de email. Dacă emailul nu este completat corect, afișează o eroare și împiedică trimiterea formularului (folosește `submit` și `preventDefault`).
+
+```js
+const form = document.createElement("form");
+document.body.appendChild(form);
+
+const input = document.createElement("input");
+// input.type = "email";
+input.placeholder = "Introdu email";
+form.appendChild(input);
+
+const button = document.createElement("button");
+button.textContent = "Trimite";
+form.appendChild(button);
+
+const div = document.createElement("div");
+document.body.appendChild(div);
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (!input.value.includes("@")) {
+    div.textContent = "Email invalid";
+  } else {
+    div.textContent = `Email trimis: ${input.value}`;
+  }
+  div.scrollIntoView({ behavior: "smooth" });
+});
+
+button.scrollIntoView({ behavior: "smooth" });
+```
+
+---
+
+## **6**
+
+a. Creează un `<div>` care își schimbă poziția în funcție de mișcarea mouse-ului (`mousemove`).
+
+```js
+const div = document.createElement("div");
+div.style.width = "100px";
+div.style.height = "100px";
+div.style.backgroundColor = "blue";
+div.style.position = "absolute";
+document.body.appendChild(div);
+
+document.addEventListener("mousemove", (e) => {
+  div.style.left = e.clientX + "px";
+  div.style.top = e.clientY + "px";
+});
+
+div.scrollIntoView({ behavior: "smooth" });
+```
+
+b. Creează un buton care afișează ce buton al mouse-ului a fost apăsat (stânga, mijloc, dreapta).
+
+```js
+const button = document.createElement("button");
+button.textContent = "Click";
+document.body.appendChild(button);
+
+const div = document.createElement("div");
+document.body.appendChild(div);
+
+button.addEventListener("mousedown", (e) => {
+  switch (e.button) {
+    case 0:
+      div.textContent = "Stanga";
+      break;
+    case 1:
+      div.textContent = "Mijloc";
+      break;
+    case 2:
+      div.textContent = "Dreapta";
+      break;
+  }
+
+  div.scrollIntoView({ behavior: "smooth" });
+});
+
+button.scrollIntoView({ behavior: "smooth" });
+```
+
+c. Creează o funcționalitate care mută un `<div>` pe ecran cu săgețile tastaturii (`ArrowUp`, `ArrowDown`, `ArrowLeft`, `ArrowRight`).
+
+```js
+const div = document.createElement("div");
+div.style.width = "100px";
+div.style.height = "100px";
+div.style.backgroundColor = "red";
+div.style.position = "fixed";
+div.style.top = "-10px";
+div.style.left = "10px";
+div.style.border = "1px solid yellow";
+div.style.transition = "all 0.02s";
+div.style.borderRadius = "50%";
+document.body.appendChild(div);
+
+document.addEventListener("keydown", (e) => {
+  switch (e.key) {
+    case "ArrowUp":
+      div.style.top = parseInt(div.style.top) - 10 + "px";
+      break;
+    case "ArrowDown":
+      div.style.top = parseInt(div.style.top) + 10 + "px";
+      break;
+    case "ArrowLeft":
+      div.style.left = parseInt(div.style.left) - 10 + "px";
+      break;
+    case "ArrowRight":
+      div.style.left = parseInt(div.style.left) + 10 + "px";
+      break;
+  }
+});
+
+div.scrollIntoView({ behavior: "smooth" });
+```
+
+---
+
+## **7**
+
+a. Creează un buton „Start" care pornește un cronometru într-un `<span>` și un buton „Stop" care îl oprește.
+
+```js
+const start = document.createElement("button");
+start.textContent = "Start";
+document.body.appendChild(start);
+
+const stop = document.createElement("button");
+stop.textContent = "Stop";
+document.body.appendChild(stop);
+
+const span = document.createElement("span");
+span.textContent = "0";
+document.body.appendChild(span);
+
+let timer;
+
+start.addEventListener("click", () => {
+  timer = setInterval(() => {
+    span.textContent = parseInt(span.textContent) + 1;
+  }, 1000);
+});
+
+stop.addEventListener("click", () => {
+  clearInterval(timer);
+});
+
+span.scrollIntoView({ behavior: "smooth" });
+```
+
+b. Creează o bară de progres care se umple treptat în 5 secunde la apăsarea unui buton.
+
+```js
+const button = document.createElement("button");
+button.textContent = "Start";
+document.body.appendChild(button);
+
+const div = document.createElement("div");
+div.style.width = "0";
+div.style.height = "20px";
+div.style.backgroundColor = "blue";
+div.style.transition = "width 5s";
+document.body.appendChild(div);
+
+button.addEventListener("click", () => {
+  div.style.width = "100%";
+});
+
+div.scrollIntoView({ behavior: "smooth" });
+```
+
+---
+
+## **8**
+
+a. Creează un element care reacționează la un eveniment personalizat (`myCustomEvent`) schimbându-și textul. Apelează evenimentul din JavaScript.
+
+```js
+const div = document.createElement("div");
+div.textContent = "Text initial";
+document.body.appendChild(div);
+
+const event = new Event("myCustomEvent");
+
+div.addEventListener("myCustomEvent", () => {
+  div.textContent = "Text schimbat";
+});
+
+div.dispatchEvent(event);
+
+div.scrollIntoView({ behavior: "smooth" });
+```
+
+---
+
+## **9**
+
+a. Creează o funcționalitate de drag-and-drop pentru a muta un `<div>` între două zone.
+
+```js
+const div = document.createElement("div");
+div.style.width = "100px";
+div.style.height = "100px";
+div.style.backgroundColor = "red";
+div.style.position = "absolute";
+div.style.top = "10px";
+div.style.left = "10px";
+div.style.borderRadius = "50%";
+div.style.border = "1px solid yellow";
+div.style.transition = "all 0.02s";
+document.body.appendChild(div);
+
+let isDragging = false;
+
+div.addEventListener("mousedown", () => {
+  isDragging = true;
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (isDragging) {
+    div.style.top = e.clientY + "px";
+    div.style.left = e.clientX + "px";
+  }
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+});
+
+div.scrollIntoView({ behavior: "smooth" });
+```
+
+b. Creează o zonă de „drop" care acceptă doar un anumit element (identificat prin clasă sau ID) și afișează un mesaj de succes.
+
+```js
+const drop = document.createElement("div");
+drop.style.width = "200px";
+drop.style.height = "200px";
+drop.style.backgroundColor = "blue";
+drop.style.position = "absolute";
+drop.style.top = "100px";
+drop.style.left = "300px";
+drop.style.border = "1px solid yellow";
+drop.textContent = "Drop Here";
+drop.style.display = "flex";
+drop.style.justifyContent = "center";
+drop.style.alignItems = "center";
+document.body.appendChild(drop);
+
+const div = document.createElement("div");
+div.style.width = "100px";
+div.style.height = "100px";
+div.style.backgroundColor = "red";
+div.style.position = "absolute";
+div.style.top = "100px";
+div.style.left = "100px";
+div.style.borderRadius = "50%";
+div.style.border = "1px solid yellow";
+div.textContent = "Drag me";
+div.style.display = "flex";
+div.style.justifyContent = "center";
+div.style.alignItems = "center";
+div.style.cursor = "grab";
+div.draggable = true;
+document.body.appendChild(div);
+
+div.addEventListener("mousedown", () => {
+  isDragging = true;
+});
+
+div.addEventListener("dragstart", (e) => {
+  e.dataTransfer.setData("text/plain", "drag");
+  div.style.opacity = "0.5";
+});
+
+div.addEventListener("dragend", () => {
+  div.style.opacity = "1";
+});
+
+drop.addEventListener("dragover", (e) => {
+  e.preventDefault();
+});
+
+drop.addEventListener("drop", (e) => {
+  e.preventDefault();
+  const data = e.dataTransfer.getData("text/plain");
+  if (data === "drag") {
+    drop.style.backgroundColor = "green";
+    drop.textContent = "Success!";
+  }
+});
+
+div.scrollIntoView({ behavior: "smooth" });
+```
+
+---
+
+## **10**
+
+a. Creează un meniu dropdown care se deschide și se închide la click.
+
+```js
+const button = document.createElement("button");
+button.textContent = "Dropdown";
+document.body.appendChild(button);
+
+const div = document.createElement("div");
+div.style.display = "none";
+div.style.position = "absolute";
+div.style.width = "300px";
+div.style.height = "100px";
+div.style.backgroundColor = "blue";
+div.style.border = "1px solid yellow";
+div.style.zIndex = "1";
+document.body.appendChild(div);
+
+button.addEventListener("click", () => {
+  const rect = button.getBoundingClientRect();
+  div.style.top = `${rect.bottom + window.scrollY}px`;
+  div.style.left = `${rect.left + window.scrollX}px`;
+  div.style.display = div.style.display === "none" ? "block" : "none";
+  div.scrollIntoView({ behavior: "smooth" });
+});
+
+button.scrollIntoView({ behavior: "smooth" });
+```
+
+b. Creează un acordion în care secțiunile de conținut se extind/restrâng la click.
+
+```js
+const sections = [
+  {
+    title: "Section 1",
+    content: "Content 1",
+  },
+  {
+    title: "Section 2",
+    content: "Content 2",
+  },
+  {
+    title: "Section 3",
+    content: "Content 3",
+  },
+];
+
+sections.forEach((section) => {
+  const div = document.createElement("div");
+  div.style.width = "300px";
+  div.style.height = "50px";
+  div.style.backgroundColor = "blue";
+  div.style.border = "1px solid yellow";
+  div.textContent = section.title;
+  document.body.appendChild(div);
+
+  const p = document.createElement("p");
+  p.style.display = "none";
+  p.textContent = section.content;
+  document.body.appendChild(p);
+
+  div.addEventListener("click", () => {
+    p.style.display = p.style.display === "none" ? "block" : "none";
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  });
+  div.scrollIntoView({ behavior: "smooth" });
+});
+```
+
+c. Creează o animație simplă: un buton care mută un `<div>` dintr-o parte în alta a ecranului.
+
+```js
+const button = document.createElement("button");
+button.textContent = "Move";
+document.body.appendChild(button);
+
+const div = document.createElement("div");
+div.style.width = "100px";
+div.style.height = "100px";
+div.style.backgroundColor = "red";
+div.style.position = "fixed";
+div.style.bottom = "30px";
+div.style.left = "10px";
+div.style.borderRadius = "50%";
+div.style.border = "1px solid yellow";
+div.style.transition = "all 2s";
+document.body.appendChild(div);
+
+let isMoving = false;
+
+button.addEventListener("click", () => {
+  if (!isMoving) {
+    div.style.left = "500px";
+    isMoving = true;
+  } else {
+    div.style.left = "10px";
+    isMoving = false;
+  }
+});
+
+button.scrollIntoView({ behavior: "smooth" });
+```
+
+---
